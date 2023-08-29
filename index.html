@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosh sahifa | 10-Maktab</title>
+    <title>Ro'yhatdan o'tish | 10-Maktab</title>
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">    
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-
+    
     <link rel="icon" href="img/logo 3.svg">
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcyjuMnAAAAAGGknlbsJmZi83fqPDJGEAqq-etq"></script>
+        ...
+        
+        <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.enterprise.execute('6LcyjuMnAAAAAGGknlbsJmZi83fqPDJGEAqq-etq', {action: 'LOGIN'});
+            // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
+            // reCAPTCHA Enterprise to the end user's browser.
+            // This token must be validated by creating an assessment.
+            // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
+          });
+        }
+        </script>
 </head>
 <body>
     
@@ -44,202 +62,23 @@
                 <a class="head-login-a" href="login.html">Ro'yxatdan o'tish📝</a>
                 
             </div>
-            
-            <div class="hero">
-                
-                <h1 class="hero-h1">Yangiliklar
-                    <img src="img/news.png" alt="news" width="70" height="70">
-                </h1>
-                
-                <div class="hero-right"> 
-                    
-                    <div class="slider">
-                        
-                        <input class="visually-hidden" type="radio" name="slider-ctrl" id="slider-ctrl-1" checked>
-                        <input class="visually-hidden" type="radio" name="slider-ctrl" id="slider-ctrl-4">
-                        <input class="visually-hidden" type="radio" name="slider-ctrl" id="slider-ctrl-2">
-                        <input class="visually-hidden" type="radio" name="slider-ctrl" id="slider-ctrl-3">
-                        
-                        <ul class="slider-list">
-                            <li class="slider-item">
-                                <div class="slider-hero">
-                                    <a class="info-a" href="news.html">
-                                        <div class="info-wrapper">
-                                            <img class="slider-img" src="img/book-2.jpg" alt="book" width="700" height="350">
-                                            <a class="info-wrapper-link" href="news.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, architecto eveniet. Vel facere voluptates amet odio minima! Aut corrupti molestiae vel porro assumenda.</a>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            
-                            <li class="slider-item">
-                                <div class="slider-hero">
-                                    <a class="info-a" href="news.html">
-                                        <div class="info-wrapper">
-                                            <img class="slider-img" src="img/book.png" alt="book" width="700" height="350">
-                                            <a class="info-wrapper-link" href="news.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, architecto eveniet. Vel facere voluptates amet odio minima! Aut corrupti molestiae vel porro assumenda.</a>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            
-                            <li class="slider-item">
-                                <div class="slider-hero">
-                                    <a class="info-a" href="news.html">
-                                        <div class="info-wrapper">
-                                            <img class="slider-img" src="img/bok.jpg" alt="book" width="700" height="350">
-                                            <a class="info-wrapper-link" href="news.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, architecto eveniet. Vel facere voluptates amet odio minima! Aut corrupti molestiae vel porro assumenda.</a>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            
-                            <li class="slider-item"> 
-                                <div class="slider-hero">
-                                    <a class="info-a" href="news.html">
-                                        <div class="info-wrapper">
-                                            <img class="slider-img" src="img/books.jpg" alt="book" width="700" height="350">
-                                            <a class="info-wrapper-link" href="news.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, architecto eveniet. Vel facere voluptates amet odio minima! Aut corrupti molestiae vel porro assumenda.</a>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            
-                        </ul>
-                        
-                        <div class="slider-ctrls">
-                            <label for="slider-ctrl-1"> . </label>
-                            <label for="slider-ctrl-2"> . </label>
-                            <label for="slider-ctrl-3"> . </label>
-                            <label for="slider-ctrl-4"> . </label>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </div>
-            
         </div>
     </header>
     
     <main class="main">
         <div class="container">
-            <div class="main-top">
-                <h1 class="main-h1">Darsliklar📚</h1>
-                <a class="see-more" href="listen.html">
-                    Ko'proq Ko'rish
-                    <img src="img/right-arrow.png" alt="arrow" width="30" height="30">
-                </a>
+            <div class="form">
+                <label class="label" for="inpu-1">Ismingiz :</label><input class="text" id="inpu-1" type="text" placeholder="Ismingiz :">
+                <label class="label" for="inpu-2">E-mail :</label><input class="text" id="inpu-2" type="email" placeholder="E-mail :">
+                <label class="label" for="inpu-3">Parol :</label><input class="text" id="inpu-3" type="password" placeholder="Parol :">
+                <label class="label" for="text">Xabaringiz :</label><textarea id="text" cols="30" rows="5" placeholder="Xabaringiz :"></textarea>
+                <button class="submit-btn" type="submit">Jo'natish</button>
+                <div data-netlify-recaptcha="true"></div>
             </div>
-            
-            <ul class="lesson-ul">
-                <li class="lesson-li">
-                    <a href="listen.html">
-                        <div class="lesson-wrapper">
-                            <h2 class="lesson-h1">1-Sinflar Uchun</h2>
-                            <img class="lesson-img" src="img/book-and-pen.jpeg" alt="book-and-pen-img" width="300" height="250">
-                            <p class="lesson-a">Haftalik O'tiladigan Darsliklar:</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="lesson-li">
-                    <a href="listen.html">
-                        <div class="lesson-wrapper">
-                            <h2 class="lesson-h1">2-Sinflar Uchun</h2>
-                            <img class="lesson-img" src="img/book-and-pen.jpeg" alt="book-and-pen-img" width="300" height="250">
-                            <p class="lesson-a">Haftalik O'tiladigan Darsliklar:</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="lesson-li">
-                    <a href="listen.html">
-                        <div class="lesson-wrapper">
-                            <h2 class="lesson-h1">3-Sinflar Uchun</h2>
-                            <img class="lesson-img" src="img/book-and-pen.jpeg" alt="book-and-pen-img" width="300" height="250">
-                            <p class="lesson-a">Haftalik O'tiladigan Darsliklar:</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            
-            <div class="about">
-                <div class="main-top">
-                    <h1 class="main-h1">Ma'lumotlar🌐</h1>
-                    <a class="see-more" href="about.html">
-                        Ko'proq Ko'rish
-                        <img src="img/right-arrow.png" alt="arrow" width="30" height="30">
-                    </a>
-                </div>
-                
-                <ul class="about-ul">
-                    <li class="about-li">
-                        <a href="about.html">
-                            <div class="about-wrapper">
-                                <h2 class="about-h1">1-Sentabr Mustaqillik Kuni 🎉</h2>
-                                <img class="about-img" src="img/mustaqil.jpg" alt="mustaqillik-kuni" width="300" height="300">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="about-li">
-                        <a href="about.html">
-                            <div class="about-wrapper">
-                                <h2 class="about-h1">12-Sentabr Kuni Tadbir Qilinadi 🎉</h2>
-                                <img class="about-img" src="img/people.jpg" alt="mustaqillik-kuni" width="300" height="300">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="about-li">
-                        <a href="about.html">
-                            <div class="about-wrapper">
-                                <h2 class="about-h1">1-Oktabr O'qituvchilar kuni 🎉</h2>
-                                <img class="about-img" src="img/murabbiy.jpg" alt="mustaqillik-kuni" width="300" height="300">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                
-            </div>
-            
         </div>
     </main>
+
+    <script src="js/login.js"></script>
     
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <a class="logo" href="index.html">
-                    <img class="logo-img" src="img/logo.png" alt="logo" width="80" height="80">
-                    10-Maktab
-                </a>
-                
-                <nav class="head-nav">
-                    <ul class="head-ul">
-                        <li class="head-li">
-                            <a class="head-li-a" href="index.html">Bosh sahifa🏡</a>
-                        </li>
-                        <li class="head-li">
-                            <a class="head-li-a" href="about.html">Ma'lumotlar🌐</a>
-                        </li>
-                        <li class="head-li">
-                            <a class="head-li-a" href="listen.html">Darsliklar📚</a>
-                        </li>
-                        <li class="head-li">
-                            <a class="head-li-a" href="news.html">Yangiliklar🌍</a>
-                        </li>
-                    </ul>
-                </nav>
-                
-                <a class="head-login-a" href="login.html">Ro'yxatdan o'tish📝</a>
-                
-            </div>
-            
-            <p class="connect">
-                &copy; by <a class="connect-a" href="https://www.facebook.com/10maktabquqon/">10-Maktab</a> 2023. All Rights Reserved 
-            </p>
-                
-            </div>
-        </footer>
-        
-        <script src="js/app.js"></script>
-    </body>
-    </html>
+</body>
+</html>
