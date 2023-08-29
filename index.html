@@ -16,21 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
     
     <link rel="icon" href="img/logo 3.svg">
-        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcyjuMnAAAAAGGknlbsJmZi83fqPDJGEAqq-etq"></script>
-        ...
-        
-        <script>
-        function onClick(e) {
-          e.preventDefault();
-          grecaptcha.enterprise.ready(async () => {
-            const token = await grecaptcha.enterprise.execute('6LcyjuMnAAAAAGGknlbsJmZi83fqPDJGEAqq-etq', {action: 'LOGIN'});
-            // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
-            // reCAPTCHA Enterprise to the end user's browser.
-            // This token must be validated by creating an assessment.
-            // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
-          });
-        }
-        </script>
 </head>
 <body>
     
@@ -73,7 +58,6 @@
                 <label class="label" for="inpu-3">Parol :</label><input class="text" id="inpu-3" type="password" placeholder="Parol :">
                 <label class="label" for="text">Xabaringiz :</label><textarea id="text" cols="30" rows="5" placeholder="Xabaringiz :"></textarea>
                 <button class="submit-btn" type="submit">Jo'natish</button>
-                <div data-netlify-recaptcha="true"></div>
             </div>
         </div>
     </main>
